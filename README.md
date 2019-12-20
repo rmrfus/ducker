@@ -36,4 +36,4 @@ The trick is to obtain cert for primary domain, for example `mycool.duckdns.org`
 
 - Initial run of script will request both certs if needed. Otherwise it will attempt to renew them daily.
 - Because DuckDNS TXT record has TTL equal to 60 seconds `hook_auth.sh` will sleep 60 seconds before continue. Be patient.
-- It is recommended to check if you got proper SANs in cert by running `openssl x509 -in cert.pem -text | grep DNS` from root in proper directory.
+- It is recommended to check if you got proper SANs in cert by running `openssl x509 -in cert.pem -text | grep DNS` as root from proper directory.
