@@ -58,7 +58,7 @@ function get_cert() {
 }
 
 # if we don't have proper cert - get it!
-certbot certificates -d "${DUCKDNS_DOMAIN},\*.${DUCKDNS_DOMAIN}" | grep -q "${DUCKDNS_DOMAIN}" || get_cert
+certbot certificates -d "${DUCKDNS_DOMAIN},"'*'".${DUCKDNS_DOMAIN}" | grep -q "${DUCKDNS_DOMAIN}" || get_cert
 
 # Main loop. Adjust "touch" times if needed
 while true; do
