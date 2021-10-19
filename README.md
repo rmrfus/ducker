@@ -25,9 +25,9 @@ If everything looks sane, delete exported volume (`/opt/letsencrypt` in this exa
 
 ### Long story
 
-All recipies in the internets didn't work. Any flavor of letsencrypt client
+All recipes in the internet didn't work. Any flavor of letsencrypt client
 (except Traefik) attempted to run two DNS challenges sequentially and miserably
-fail because DuckDNS cannot keep two TXT records at the same time.
+failed because DuckDNS cannot keep two TXT records at the same time.
 Of course you can maintain 2 different certs -- one for primary domain and one for wildcard, but this is just not fair.
 
 The trick is to obtain cert for primary domain, for example `mycool.duckdns.org` and then extend it to `mycool.duckdns.org,*.mycool.duckdns.org`. This way cert will contain SANs for both domains.
